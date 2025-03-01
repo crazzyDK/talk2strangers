@@ -2,7 +2,6 @@
   "name": "talk2strangers",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -11,6 +10,7 @@
   },
   "dependencies": {
     "@types/simple-peer": "^9.11.8",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "next": "15.2.0",
     "postcss": "^8.5.3",

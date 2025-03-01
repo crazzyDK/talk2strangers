@@ -1,6 +1,10 @@
 const WebSocket = require("ws");
 
-const wss = new WebSocket.Server({ port: 5000 });
+require("dotenv").config();
+
+const PORT = process.env.PORT || 5000;
+
+const wss = new WebSocket.Server({ port: PORT });
 let waitingUsers = []; // Queue of users waiting to connect
 let activePairs = new Map(); // Stores active user pairs
 
@@ -56,4 +60,4 @@ wss.on("connection", (ws) => {
     });
 });
 
-console.log("WebSocket Server running on ws://localhost:5000");
+console.log(`WebSocket Server running on ${PORT}`);

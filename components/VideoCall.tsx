@@ -11,7 +11,7 @@ const VideoCall = () => {
   const [isMicOn, setIsMicOn] = useState(true);
 
   useEffect(() => {
-    ws.current = new WebSocket("ws://localhost:5000");
+    ws.current = new WebSocket("wss://talk2strangers-backend.onrender.com");
 
     ws.current.onopen = () => {
       console.log("Connected to WebSocket server");
